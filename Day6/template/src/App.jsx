@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ProfileCard from "./components/ProfileCard";
 import List from "./components/List";
 import Form from "./components/form";
+import TableExample from "./components/Table";
 
 function App() {
   const [activeTab, setActiveTab] = useState("profile");
@@ -15,6 +16,7 @@ function App() {
         <button onClick={() => setActiveTab("profile")}>Profile</button>
         <button onClick={() => setActiveTab("list")}>List</button>
         <button onClick={() => setActiveTab("form")}>Form</button>
+        <button onClick={() => setActiveTab("table")}>Table</button>
 
       </div>
 
@@ -23,6 +25,7 @@ function App() {
         {activeTab === "profile" && <ProfileCard />}
         {activeTab === "list" && <List />}
         {activeTab === "form" && <Form />}
+        {activeTab === "table" && <TableExample />}
       </div>
     </div>
   );
